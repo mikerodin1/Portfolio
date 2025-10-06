@@ -3,57 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Michael Rodin, RPN</title>
+  <title>Résumé | Michael Rodin, RPN</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo">Michael Rodin</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="resume.html" class="active">Resume</a>
-      <a href="cover-letter.html">Cover Letter</a>
-      <a href="artifacts.html">Artifacts</a>
-      <a href="smart-goals.html">Smart Goals</a>
-      <a href="interests.html">Interests</a>
-    </nav>
-  </div>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">Michael Rodin</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="cover-letter.html">Cover Letter</a>
+        <a href="artifacts.html">Artifacts</a>
+        <a href="smart-goals.html">Smart Goals</a>
+        <a href="interests.html">Interests</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="page-header">
-  <h1 class="page-title accent">Resume</h1>
-</section>
-
-<main class="content">
-  <section class="card center">
-    <h2>Résumé</h2>
-    <p>
-      You can view my professional résumé below or download a copy for review.
-    </p>
-
-    <!-- Download Button -->
-    <a href="assets/resume.pdf" class="button" download>
-      ⬇ Download Résumé (PDF)
-    </a>
-
-    <!-- Embedded PDF Viewer -->
-    <embed
-      src="assets/resume.pdf"
-      type="application/pdf"
-      width="100%"
-      height="900px"
-      style="border-radius: 12px; border: 2px solid var(--bone); margin-top: 1.5rem;"
-    />
+  <!-- PAGE TITLE -->
+  <section class="page-header">
+    <h1 class="page-title accent">Résumé</h1>
   </section>
-</main>
 
+  <!-- CONTENT -->
+  <main class="content">
+    <section class="card center">
+      <p>You can view my résumé below or download a copy.</p>
 
-<footer>
-  <p>© 2025 Michael Rodin, RPN</p>
-</footer>
+      <!-- Download Button -->
+      <a href="assets/resume.pdf" class="button" download>⬇ Download Résumé (PDF)</a>
+
+      <!-- Centered PDF Viewer -->
+      <div class="pdf-container">
+        <embed
+          src="assets/resume.pdf"
+          type="application/pdf"
+          class="pdf-viewer"
+        />
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Michael Rodin, RPN | <a href="mailto:mirodi@flemingcollege.ca">Contact Me</a></p>
+  </footer>
 
 </body>
 </html>
