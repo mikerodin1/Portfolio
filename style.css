@@ -1,3 +1,6 @@
+/* ==============================
+   GLOBAL COLOR VARIABLES
+============================== */
 :root {
   --oxford-blue: #0A2C47;
   --indigo: #194260;
@@ -8,6 +11,9 @@
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* ==============================
+   BASE STYLES
+============================== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -16,7 +22,9 @@ body {
   line-height: 1.6;
 }
 
-/* ====== NAVBAR ====== */
+/* ==============================
+   NAVBAR
+============================== */
 .navbar {
   background: var(--oxford-blue);
   color: white;
@@ -47,11 +55,14 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: var(--bone);
 }
 
-/* ====== LANDING SECTION ====== */
+/* ==============================
+   LANDING PAGE
+============================== */
 .landing {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +119,107 @@ nav a:hover, nav a.active {
   border: 6px solid var(--bone);
 }
 
-/* ====== FOOTER ====== */
+/* ==============================
+   PAGE HEADERS
+============================== */
+.page-header {
+  background: var(--bone);
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--oxford-blue);
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+.page-title.accent {
+  color: var(--rose-ebony);
+}
+
+/* ==============================
+   GENERIC CARD LAYOUT
+============================== */
+.content {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.card h2,
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--oxford-blue);
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background: var(--rose-ebony);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: var(--indigo);
+}
+
+/* ==============================
+   PROFILE PHOTO (ABOUT PAGE)
+============================== */
+.profile-photo {
+  width: 250px;
+  float: right;
+  margin: 0 0 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 5px solid var(--bone);
+}
+
+/* ==============================
+   PDF VIEWER (Centered + Responsive)
+============================== */
+.pdf-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.pdf-frame,
+.pdf-viewer {
+  width: 80vw;              /* 80% of viewport width */
+  max-width: 900px;         /* never exceed this width */
+  height: 85vh;             /* fills most of the screen height */
+  border: 2px solid var(--bone);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: white;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==============================
+   FOOTER
+============================== */
 footer {
   background: var(--oxford-blue);
   color: #f2f2f2;
@@ -127,7 +238,9 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ====== RESPONSIVE ====== */
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
 @media (max-width: 768px) {
   .landing {
     flex-direction: column-reverse;
@@ -142,84 +255,10 @@ footer a:hover {
     max-width: 300px;
     margin-bottom: 1.5rem;
   }
-}
-.page-header {
-  background: var(--bone);
-  text-align: center;
-  padding: 2.5rem 1rem 1.5rem;
-}
 
-.page-title {
-  font-family: 'Playfair Display', serif;
-  color: var(--oxford-blue);
-  font-size: 2.6rem;
-  margin: 0;
+  .pdf-frame,
+  .pdf-viewer {
+    width: 95vw;
+    height: 75vh;
+  }
 }
-
-.page-title.accent {
-  color: var(--rose-ebony);
-}
-
-.profile-photo {
-  width: 250px;
-  float: right;
-  margin: 0 0 1rem 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: 5px solid var(--bone);
-}
-
-/* ===== Centered PDF Style ===== */
-.pdf-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem auto;
-}
-
-.pdf-viewer {
-  width: 80%;              /* Adjust width: 70–85% looks great */
-  height: 900px;
-  border-radius: 12px;
-  border: 2px solid var(--bone);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-/* ===== Page Header (optional enhancement) ===== */
-.page-header {
-  background: var(--bone);
-  text-align: center;
-  padding: 2.5rem 1rem 1.5rem;
-}
-
-.page-title {
-  font-family: 'Playfair Display', serif;
-  color: var(--oxford-blue);
-  font-size: 2.6rem;
-  margin: 0;
-}
-
-.page-title.accent {
-  color: var(--rose-ebony);
-}
-/* ===== Centered PDF Frame ===== */
-.pdf-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 2rem auto;
-}
-
-.pdf-frame {
-  width: 80vw;           /* 80% of viewport width */
-  max-width: 900px;      /* never exceed this width */
-  height: 85vh;          /* fills most of the screen height */
-  border: 2px solid var(--bone);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-
-
