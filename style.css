@@ -203,5 +203,23 @@ footer a:hover {
 .page-title.accent {
   color: var(--rose-ebony);
 }
+/* ===== Centered PDF Frame ===== */
+.pdf-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.pdf-frame {
+  width: 80vw;           /* 80% of viewport width */
+  max-width: 900px;      /* never exceed this width */
+  height: 85vh;          /* fills most of the screen height */
+  border: 2px solid var(--bone);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 
 
