@@ -40,15 +40,17 @@
       </p>
 
       <!-- Download Button -->
-      <a href="assets/cover-letter.pdf" class="button" download>⬇ Download Cover Letter (PDF)</a>
+      <a href="assets/cover-letter.pdf" class="button" download>
+        ⬇ Download Cover Letter (PDF)
+      </a>
 
       <!-- Centered PDF Viewer -->
-      <div class="pdf-container">
-        <embed
-          src="assets/cover-letter.pdf"
-          type="application/pdf"
-          class="pdf-viewer"
-        />
+      <div class="pdf-wrapper">
+        <iframe
+          src="assets/cover-letter.pdf#view=FitH"
+          class="pdf-frame"
+          title="Cover Letter PDF Viewer"
+        ></iframe>
       </div>
     </section>
   </main>
